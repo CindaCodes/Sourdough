@@ -78,3 +78,15 @@
 .hero button:hover {
   background: var(--third-color);
 }
+
+/*footer*/
+
+.bread-left {
+  transform: scaleX(-1);
+  display: inline-block;
+ 
+}
+.bread-right {
+transform: translateX(-15px);
+display: inline-block;
+}
