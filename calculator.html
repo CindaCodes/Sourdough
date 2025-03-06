@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sourdough Feeding Calculator</h1>
+  
+  <label for="totalStarterTime">Amount of Starter (grams):</label>
+  <input type="number" id="totalStarterTime" placeholder="e.g. 100" required>
+  
+  <label for="timeFrame">Time Frame (hours):</label>
+  <select id="timeFrame">
+    <option value="6-8">6-8 hours</option>
+    <option value="8-10">8-10 hours</option>
+    <option value="10-12">10-12 hours</option>
+    <option value="12-14">12-14 hours</option>
+    <option value="16-24">16-24 hours</option>
+  </select>
+  
+  <button onclick="calculateTimeframe()">Calculate Feeding Amount</button>
+
+  <div id="resultBox">
+    <p id="starterAmountTime"></p>
+    <p id="waterAmountTime"></p>
+    <p id="flourAmountTime"></p>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>

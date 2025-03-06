@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Perfect Your Sourdough</h1>
+        <p>
+          Calculate your ideal sourdough recipe with custom hydration, salt, and
+          olive oil options.
+        </p>
+        <button onclick="window.location.href='#calculator'">
+          Calculate My Recipe
+        </button>
+      </div>
+    </section>
+
+    <div class="container">
+      <h1>Sourdough Calculator</h1>
+
+      <label for="loafs">Number of loaves:</label>
+      <input
+        type="number"
+        id="loafs"
+        placeholder="Enter number of loaves"
+        min="1"
+        required
+      />
+
+      <label for="hydration">Hydration Percentage (%):</label>
+      <input
+        type="number"
+        id="hydration"
+        placeholder="Enter hydration percentage"
+        value="70"
+        min="1"
+        max="100"
+        required
+      />
+
+      <label for="oil">Olive Oil Percentage (%):</label>
+      <input
+        type="number"
+        id="oil"
+        placeholder="Enter olive oil percentage"
+        value="3"
+        min="0"
+        max="20"
+        required
+      />
+
+      <button onclick="calculate()">Calculate</button>
+
+      <div id="results">
+        <!-- Results will be displayed here -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
