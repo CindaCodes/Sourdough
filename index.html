@@ -30,11 +30,11 @@
     </section>
     <div class="container">
       <div class="column" id="learn">
-        <h1>Key Tips for Making Sourdough</h1>
-        <p>
+        <h1>Sourdough Tips</h1>
+        <h3>
           Mastering sourdough requires patience and practice. Your sourdough
           will get better with time!
-        </p>
+        </h3>
 
         <h2>Starter Care</h2>
         <ul>
@@ -53,10 +53,10 @@
           <li>Adjust water temperature as needed for consistent results.</li>
         </ul>
 
-        <h2>Hydration & Dough Handling</h2>
+        <h2>Hydration & Handling</h2>
         <ul>
           <li>Use a high-hydration dough for a better texture.</li>
-          <li>Gently handle the dough to maintain its structure.</li>
+          <li>Gently handle the dough.</li>
         </ul>
 
         <h2>Key Techniques</h2>
@@ -77,18 +77,18 @@
 
         <h2>Proofing & Baking</h2>
         <ul>
-          <li>Allow the dough to proof adequately before baking.</li>
-          <li>Preheat your oven thoroughly for the best crust formation.</li>
+          <li>Allow the dough to proof adequately.</li>
+          <li>Preheat your oven thoroughly.</li>
         </ul>
       </div>
 
       <div class="column">
-        <h1>The History of Sourdough</h1>
-        <p>
-          Sourdough bread dates back to **ancient Egypt** and is one of the
-          **oldest leavened breads**. It was a staple food for the Egyptians and
-          played a role in religious ceremonies in ancient Greece.
-        </p>
+        <h1>History</h1>
+        <h3>
+          Sourdough bread dates back to ancient Egypt and is one of the oldest
+          leavened breads. It was a staple food for the Egyptians and played a
+          role in religious ceremonies in ancient Greece.
+        </h3>
 
         <h2>Origins</h2>
         <ul>
@@ -105,39 +105,39 @@
         <h2>History of Use</h2>
         <ul>
           <li>
-            Sourdough was the **primary leavening agent** for bread for most of
+            Sourdough was the primary leavening agent for bread for most of
             human history.
           </li>
           <li>
-            In the European **Middle Ages**, sourdough was largely replaced by
-            barm from beer brewing.
+            In the European Middle Ages, sourdough was largely replaced by barm
+            from beer brewing.
           </li>
           <li>
-            During the **California Gold Rush** in the 19th century, sourdough
-            was a **vital food source for miners**.
+            During the California Gold Rush in the 19th century, sourdough was a
+            vital food source for miners.
           </li>
           <li>
-            In the **1980s**, sourdough bread gained popularity again, sparking
-            a modern resurgence.
+            In the 1980s, sourdough bread gained popularity again, sparking a
+            modern resurgence.
           </li>
         </ul>
 
         <h2>Other Uses</h2>
         <ul>
           <li>
-            Sourdough starters were so **highly prized** that miners would carry
+            Sourdough starters were so highly prized that miners would carry
             them around their necks or on their belts.
           </li>
         </ul>
       </div>
 
       <div class="column">
-        <h1>Health Benefits of Sourdough</h1>
-        <p>
+        <h1>Health Benefits</h1>
+        <h3>
           Sourdough bread is nutritious and offers many health benefits,
           including improved digestion, better blood sugar control, and fewer
           preservatives.
-        </p>
+        </h3>
 
         <h2>Digestion</h2>
         <ul>
@@ -191,7 +191,7 @@
     </div>
     <div class="container">
       <div class="column">
-        <h1>Sourdough Feeding Calculator</h1>
+        <h1 class="feed-calc">Sourdough Feeding Calculator</h1>
 
         <label for="totalStarterTime">Amount of Starter needed in grams:</label>
         <input
@@ -202,7 +202,7 @@
         />
         <br />
         <label for="timeFrame">Time Frame (hours):</label>
-        <select id="timeFrame">
+        <select id="timeFrame" class="feed-calc">
           <option value="6-8">6-8 hours</option>
           <option value="8-10">8-10 hours</option>
           <option value="10-12">10-12 hours</option>
@@ -210,16 +210,19 @@
           <option value="16-24">16-24 hours</option>
         </select>
         <br />
-        <button onclick="calculateTimeframe()">Calculate Feeding Amount</button>
-
-        <div id="resultBox">
+        <div class="button-container">
+          <button onclick="calculateTimeframe()">
+            Calculate Feeding Amount
+          </button>
+        </div>
+        <div id="resultBox" class="result-box">
           <p id="starterAmountTime"></p>
           <p id="waterAmountTime"></p>
           <p id="flourAmountTime"></p>
         </div>
       </div>
       <div class="column">
-        <h1>Sourdough Calculator</h1>
+        <h1>Bakers Math Calculator</h1>
 
         <label for="loafs">Number of loaves:</label>
         <input
@@ -251,26 +254,34 @@
           max="20"
           required
         />
-
-        <button onclick="calculate()">Calculate</button>
-
+        <div class="button-container">
+          <button onclick="calculate()">Calculate</button>
+        </div>
         <div id="results">
           <!-- Results will be displayed here -->
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="column">
-        <h2>Sourdough Step Timer</h2>
+      <div class="column steps">
+        <h1>Sourdough Step Timer</h1>
+        <h3 id="stepCounter"></h3>
         <p id="stepText"></p>
         <p id="stepNote"></p>
         <div class="timer" id="timer">30:00</div>
-        <button class="start" onclick="startTimer()">Start</button>
-        <button class="pause" onclick="pauseTimer()">Pause</button>
-        <button class="reset" onclick="resetTimer()">Reset</button>
-        <button class="next" onclick="nextStep()">Next Step</button>
+        <div class="button-container">
+          <button class="start" onclick="startTimer()">Start</button>
+          <button class="pause" onclick="pauseTimer()">Pause</button>
+          <button class="reset" onclick="resetTimer()">Reset</button>
+        </div>
+        <div class="button-container">
+          <button class="prev" onclick="previousStep()">⬅ Back</button>
+          <button class="next" onclick="nextStep()">Next ➡</button>
+          <button class="start-over" onclick="startOver()">Start Over</button>
+        </div>
       </div>
     </div>
+
     <footer>
       This project was
       <a href="https://github.com/CindaCodes" target="_blank"
@@ -287,5 +298,6 @@
       >
     </footer>
     <script src="/src/script.js"></script>
+    <script src="/src/timer.js"></script>
   </body>
 </html>

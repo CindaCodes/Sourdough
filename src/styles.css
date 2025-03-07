@@ -75,6 +75,10 @@
   font-weight: normal;
 }
 
+.hero button:hover {
+  background: var(--third-color);
+}
+
 /* 3 Column Section*/
 .container {
   display: flex;
@@ -96,14 +100,96 @@
 .container h1 {
   color: var(--second-color);
   text-align: center;
+  font-family: var(--font-family-1);
 }
 .container h2 {
   text-align: center;
   color: var(--second-color);
+  font-family: var(--font-family-1);
+  margin: 10px auto;
+}
+.column h3 {
+  font-family: var(--font-family-2);
+  text-align: center;
+}
+.column li, label, .result-box {
+  font-family: var(--font-family-2);
+  letter-spacing: 1px;
 }
 
-.hero button:hover {
+
+input, select, .steps p {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  font-family: var(--font-family-2);
+  letter-spacing: 1px;
+}
+
+input:focus, select:focus {
+  border-color: var(--fourth-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feed-calc{
+  margin-bottom: 40px;
+}
+
+.timer {
+  font-size: 60px;
+  margin: 20px 0;
+  text-align: center;
+  font-family: var(--font-family-1);
+}
+
+
+button {
+  background: var(--fourth-color);
+  color: var(--second-color);
+  border: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-family-1);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+}
+
+button:hover {
+  background: var(--second-color);
+  color: var(--fourth-color);
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+button:active {
   background: var(--third-color);
+}
+
+.prev, .next {
+  background: var(--second-color);
+  color: var(--fourth-color);
+}
+
+.prev:hover, .next:hover {
+  background: var(--fourth-color);
+  color: var(--second-color);
 }
 
 /*footer*/
@@ -128,6 +214,7 @@ footer a {
   transform: translateX(-20px);
   display: inline-block;
 }
+
 
 @media (max-width: 900px) {
   .hero-content {
@@ -164,5 +251,9 @@ footer a {
   .bread-right {
     transform: translateX(-15px);
     display: inline-block;
+  }
+
+  button {
+    font-size: 14px;
   }
 }
