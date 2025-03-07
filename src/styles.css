@@ -31,7 +31,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
@@ -73,6 +73,33 @@
   margin-top: 1rem;
   font-family: var(--font-family-1);
   font-weight: normal;
+}
+
+/* 3 Column Section*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 97vw;
+}
+
+.column {
+  background: var(--first-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.container h1 {
+  color: var(--second-color);
+  text-align: center;
+}
+.container h2 {
+  text-align: center;
+  color: var(--second-color);
 }
 
 .hero button:hover {
@@ -119,11 +146,23 @@ footer a {
     padding: 10px 20px;
     font-size: 1rem;
   }
+  .why-sourdough {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-container,
+  .text-container {
+    max-width: 100%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
   footer {
     font-size: 1rem;
   }
   .bread-right {
-  transform: translateX(-15px);
-  display: inline-block;
-}
+    transform: translateX(-15px);
+    display: inline-block;
+  }
 }

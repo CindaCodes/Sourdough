@@ -52,8 +52,8 @@ document.getElementById("results").innerHTML = `
                 <p>Salt: ${totalSalt.toFixed(2)}g</p>
             `;
 
-// // Sourdough recipe timer
-let steps = [
+// Sourdough recipe timer
+let steps = [ 
   {
     text: "Mix together levain, Water and Flour  - Cover and Autolyse for 2 hours",
     note: "Here’s what I use: 100g of 100% hydration sourdough starter fed the night before, 350g of filtered water, and 500g of unbleached organic all-purpose flour. But hey, feel free to go rogue and use your own recipe! Be sure to check out my sourdough starter calculator to help you figure out the right ratios and timing for your starter.",
@@ -116,7 +116,7 @@ let steps = [
   },
 ];
 
-let currentStep = 0;
+let currentStep = 1;
 let timeRemaining = steps[currentStep].time;
 let timerInterval;
 
@@ -158,17 +158,21 @@ function resetTimer() {
   pauseTimer();
   timeRemaining = steps[currentStep].time;
   updateDisplay();
+  startTimer(); // Automatically restart after reset
 }
+
 
 function nextStep() {
   if (currentStep < steps.length - 1) {
     currentStep++;
     timeRemaining = steps[currentStep].time;
     updateDisplay();
+    startTimer(); // Restart the timer when moving to the next step
   } else {
     alert("Congratulations! 🎉 You made sourdough! 🍞👏");
   }
 }
+
 
 updateDisplay();
 

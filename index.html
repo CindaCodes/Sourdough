@@ -23,50 +23,252 @@
         <h3><span class="flip">🥖</span> Let’s Bake 🥖</h3>
         <h1>Perfect Your Sourdough</h1>
         <h2>Your guide for mastering the art of sourdough bread baking.</h2>
-        <button onclick="window.location.href='#'">
+        <button onclick="window.location.href='/index.html#learn'">
           Learn More
         </button>
       </div>
     </section>
-
     <div class="container">
-      <h1>Sourdough Calculator</h1>
+      <div class="column" id="learn">
+        <h1>Key Tips for Making Sourdough</h1>
+        <p>
+          Mastering sourdough requires patience and practice. Your sourdough
+          will get better with time!
+        </p>
 
-      <label for="loafs">Number of loaves:</label>
-      <input
-        type="number"
-        id="loafs"
-        placeholder="Enter number of loaves"
-        min="1"
-        required
-      />
+        <h2>Starter Care</h2>
+        <ul>
+          <li>
+            Feed your starter regularly with flour and water to keep it active.
+          </li>
+          <li>
+            If your starter has been in the fridge, "wake it up" by feeding it
+            several times before baking.
+          </li>
+        </ul>
 
-      <label for="hydration">Hydration Percentage (%):</label>
-      <input
-        type="number"
-        id="hydration"
-        placeholder="Enter hydration percentage"
-        value="70"
-        min="1"
-        max="100"
-        required
-      />
+        <h2>Temperature Control</h2>
+        <ul>
+          <li>Monitor dough temperature to ensure proper fermentation.</li>
+          <li>Adjust water temperature as needed for consistent results.</li>
+        </ul>
 
-      <label for="oil">Olive Oil Percentage (%):</label>
-      <input
-        type="number"
-        id="oil"
-        placeholder="Enter olive oil percentage"
-        value="3"
-        min="0"
-        max="20"
-        required
-      />
+        <h2>Hydration & Dough Handling</h2>
+        <ul>
+          <li>Use a high-hydration dough for a better texture.</li>
+          <li>Gently handle the dough to maintain its structure.</li>
+        </ul>
 
-      <button onclick="calculate()">Calculate</button>
+        <h2>Key Techniques</h2>
+        <ul>
+          <li>
+            <strong>Stretch & Fold:</strong> Helps develop gluten for a chewy
+            crumb.
+          </li>
+          <li>
+            <strong>Autolyse:</strong> Let flour and water sit before adding
+            other ingredients to improve dough handling.
+          </li>
+          <li>
+            <strong>Pre-shape (optional):</strong> Lightly shape before final
+            shaping.
+          </li>
+        </ul>
 
-      <div id="results">
-        <!-- Results will be displayed here -->
+        <h2>Proofing & Baking</h2>
+        <ul>
+          <li>Allow the dough to proof adequately before baking.</li>
+          <li>Preheat your oven thoroughly for the best crust formation.</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h1>The History of Sourdough</h1>
+        <p>
+          Sourdough bread dates back to **ancient Egypt** and is one of the
+          **oldest leavened breads**. It was a staple food for the Egyptians and
+          played a role in religious ceremonies in ancient Greece.
+        </p>
+
+        <h2>Origins</h2>
+        <ul>
+          <li>
+            The discovery of sourdough was likely accidental when dough was left
+            out and wild yeast and bacteria in the air colonized it.
+          </li>
+          <li>
+            The bacteria and yeast in the starter give sourdough its signature
+            sour taste and cause the bread to rise.
+          </li>
+        </ul>
+
+        <h2>History of Use</h2>
+        <ul>
+          <li>
+            Sourdough was the **primary leavening agent** for bread for most of
+            human history.
+          </li>
+          <li>
+            In the European **Middle Ages**, sourdough was largely replaced by
+            barm from beer brewing.
+          </li>
+          <li>
+            During the **California Gold Rush** in the 19th century, sourdough
+            was a **vital food source for miners**.
+          </li>
+          <li>
+            In the **1980s**, sourdough bread gained popularity again, sparking
+            a modern resurgence.
+          </li>
+        </ul>
+
+        <h2>Other Uses</h2>
+        <ul>
+          <li>
+            Sourdough starters were so **highly prized** that miners would carry
+            them around their necks or on their belts.
+          </li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h1>Health Benefits of Sourdough</h1>
+        <p>
+          Sourdough bread is nutritious and offers many health benefits,
+          including improved digestion, better blood sugar control, and fewer
+          preservatives.
+        </p>
+
+        <h2>Digestion</h2>
+        <ul>
+          <li>
+            <strong>Prebiotics:</strong> Sourdough fermentation produces
+            prebiotics, which feed gut bacteria and aid digestion.
+          </li>
+          <li>
+            <strong>Protein:</strong> Fermentation breaks down protein
+            structures, making them easier to digest.
+          </li>
+          <li>
+            <strong>Starches:</strong> The bacteria and yeast in sourdough help
+            break down starches before they reach the stomach.
+          </li>
+        </ul>
+
+        <h2>Blood Sugar</h2>
+        <ul>
+          <li>
+            <strong>Low Glycemic Index:</strong> Sourdough raises blood sugar
+            more slowly and steadily than other breads.
+          </li>
+        </ul>
+
+        <h2>Gluten Tolerance</h2>
+        <ul>
+          <li>
+            <strong>Broken Down Gluten:</strong> The long fermentation process
+            breaks down gluten, making it easier to digest for those with gluten
+            intolerance.
+          </li>
+        </ul>
+
+        <h2>Gut Microbiome</h2>
+        <ul>
+          <li>
+            <strong>Probiotics:</strong> The lactic acid bacteria in sourdough
+            support a healthy gut microbiome.
+          </li>
+        </ul>
+
+        <h2>Preservatives</h2>
+        <ul>
+          <li>
+            <strong>Acetic Acid:</strong> Sourdough contains acetic acid, which
+            naturally prevents mold growth.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="column">
+        <h1>Sourdough Feeding Calculator</h1>
+
+        <label for="totalStarterTime">Amount of Starter needed in grams:</label>
+        <input
+          type="number"
+          id="totalStarterTime"
+          placeholder="e.g. 100"
+          required
+        />
+        <br />
+        <label for="timeFrame">Time Frame (hours):</label>
+        <select id="timeFrame">
+          <option value="6-8">6-8 hours</option>
+          <option value="8-10">8-10 hours</option>
+          <option value="10-12">10-12 hours</option>
+          <option value="12-14">12-14 hours</option>
+          <option value="16-24">16-24 hours</option>
+        </select>
+        <br />
+        <button onclick="calculateTimeframe()">Calculate Feeding Amount</button>
+
+        <div id="resultBox">
+          <p id="starterAmountTime"></p>
+          <p id="waterAmountTime"></p>
+          <p id="flourAmountTime"></p>
+        </div>
+      </div>
+      <div class="column">
+        <h1>Sourdough Calculator</h1>
+
+        <label for="loafs">Number of loaves:</label>
+        <input
+          type="number"
+          id="loafs"
+          placeholder="Enter number of loaves"
+          min="1"
+          required
+        />
+        <br />
+        <label for="hydration">Hydration Percentage (%):</label>
+        <input
+          type="number"
+          id="hydration"
+          placeholder="Enter hydration percentage"
+          value="70"
+          min="1"
+          max="100"
+          required
+        />
+        <br />
+        <label for="oil">Olive Oil Percentage (%):</label>
+        <input
+          type="number"
+          id="oil"
+          placeholder="Enter olive oil percentage"
+          value="3"
+          min="0"
+          max="20"
+          required
+        />
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="results">
+          <!-- Results will be displayed here -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="column">
+        <h2>Sourdough Step Timer</h2>
+        <p id="stepText"></p>
+        <p id="stepNote"></p>
+        <div class="timer" id="timer">30:00</div>
+        <button class="start" onclick="startTimer()">Start</button>
+        <button class="pause" onclick="pauseTimer()">Pause</button>
+        <button class="reset" onclick="resetTimer()">Reset</button>
+        <button class="next" onclick="nextStep()">Next Step</button>
       </div>
     </div>
     <footer>
@@ -80,7 +282,9 @@
         >open sourced on GitHub Pages</a
       >
       and
-      <a href="https://sourdough-calculator.netlify.app/" target="_blank">hosted by Netlify</a>
+      <a href="https://sourdough-calculator.netlify.app/" target="_blank"
+        >hosted by Netlify</a
+      >
     </footer>
     <script src="/src/script.js"></script>
   </body>
