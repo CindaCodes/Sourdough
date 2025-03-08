@@ -115,9 +115,11 @@
 }
 .column li,
 label,
-.result-box {
+.result-box,
+.results {
   font-family: var(--font-family-2);
   letter-spacing: 1px;
+  text-align: center;
 }
 
 input,

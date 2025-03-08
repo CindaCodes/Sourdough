@@ -29,28 +29,25 @@ function calculate() {
   const totalOil = totalFlour * oilRatio;
 
   // Display Results
-  document.getElementById("results").innerHTML = `
-                <p><strong>For ${loafs} loaf(s):</strong></p>
-                <p>Flour: ${totalFlour}g</p>
-                <p>Water: ${totalWater.toFixed(
-                  2
-                )}g (Hydration: ${hydration}%)</p>
-                <p>Starter: ${totalStarter.toFixed(2)}g</p>
-                <p>Salt: ${totalSalt.toFixed(2)}g</p>
-                <p>Olive Oil: ${totalOil.toFixed(
-                  2
-                )}g (Olive Oil: ${oilPercentage}%)</p>
-            `;
+  let resultsHTML = `
+    <p><strong>For ${loafs} loaf(s):</strong></p>
+    <p><strong>Flour:</strong> ${totalFlour}g</p>
+    <p><strong>Water:</strong> ${totalWater.toFixed(
+      2
+    )}g (Hydration: ${hydration}%)</p>
+    <p><strong>Starter:</strong> ${totalStarter.toFixed(2)}g</p>
+    <p><strong>Salt:</strong> ${totalSalt.toFixed(2)}g</p>`;
+
+  // Only include olive oil if percentage is greater than 0
+  if (oilPercentage > 0) {
+    resultsHTML += `<p><strong>Olive Oil:</strong> ${totalOil.toFixed(
+      2
+    )}g (Olive Oil: ${oilPercentage}%)</p>`;
+  }
+
+  document.getElementById("results").innerHTML = resultsHTML;
 }
 
-// Display Results
-document.getElementById("results").innerHTML = `
-                <p><strong>For ${loafs} loaf(s):</strong></p>
-                <p>Flour: ${totalFlour}g</p>
-                <p>Water: ${totalWater.toFixed(2)}g</p>
-                <p>Starter: ${totalStarter.toFixed(2)}g</p>
-                <p>Salt: ${totalSalt.toFixed(2)}g</p>
-            `;
 
 
 //Sourdough starter ratio calculator
