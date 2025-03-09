@@ -112,3 +112,5 @@ function calculateTimeframe() {
 
  // Auto-advance slides every 5 seconds
  setInterval(() => changeSlide(1), 5000);
+
+ 

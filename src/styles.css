@@ -133,6 +133,20 @@ label,
   cursor: pointer;
 }
 
+/*instagram container*/
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between posts */
+    flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+.instagram-container blockquote {
+    max-width: 30%; /* Limit width to prevent too large display */
+    min-width: 300px; /* Ensures readability on smaller screens */
+    flex-grow: 1;
+}
+
 /* Slideshow Container */
 .slideshow-container {
   position: relative;
