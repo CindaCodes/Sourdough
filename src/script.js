@@ -98,3 +98,17 @@ function calculateTimeframe() {
   // Show the result box
   document.getElementById("resultBox").style.display = "block";
 }
+
+
+//Slideshow
+ let currentSlide = 0;
+ const slides = document.querySelectorAll(".slide");
+
+ function changeSlide(direction) {
+   slides[currentSlide].classList.remove("active");
+   currentSlide = (currentSlide + direction + slides.length) % slides.length;
+   slides[currentSlide].classList.add("active");
+ }
+
+ // Auto-advance slides every 5 seconds
+ setInterval(() => changeSlide(1), 5000);

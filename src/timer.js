@@ -37,7 +37,7 @@ let steps = [
   },
   {
     text: "Final proof at room temperature - in 1 hour we will preheat the oven",
-    note: "Total proofing time is around 2 hours at a room temperature of 70°F/21°C. This may vary depending on your room temperature—colder rooms will need a longer proof, while warmer rooms will need less time.",
+    note: "The total proofing time is approximately 2 hours at a room temperature of 70°F (21°C). However, this may vary—colder environments require a longer proof, while warmer temperatures speed up the process. If you proofed your dough in the fridge, allow it to rest at room temperature before baking.",
     time: 1 * 60 * 60,
   },
   {
@@ -46,14 +46,14 @@ let steps = [
     time: 1 * 60 * 60,
   },
   {
-    text: "Score the dough and turn down the oven to 450°F/232°C - Bake covered for 15 minutes",
+    text: "Score the dough and turn down the oven to 450°F/232°C - Bake covered for 20 minutes",
     note: "Score the dough with a lame or sharp knife to allow it to expand while baking. ⚠️Be careful! The Dutch oven is hot!⚠️ Use thick oven mitts when handling it. I like to toss a few ice cubes into the Dutch oven to create steam, but you can also use a spray bottle to mist the dough.",
-    time: 15 * 60,
+    time: 20 * 60,
   },
   {
-    text: "Remove the lid and turn around the dutch oven or loaf - bake for another 15 minutes",
+    text: "Remove the lid and turn around the dutch oven or loaf - bake for another 20 minutes",
     note: "The bread should be a beautiful golden brown and sound hollow when you tap the bottom with your knuckles. If it’s not quite done, bake it for another 5–10 minutes. The internal temperature should reach 200°F/93°C. Some bakers might aim for slightly higher temperatures, up to 210°F/99°C, for an even firmer and drier crumb.",
-    time: 15 * 60,
+    time: 20 * 60,
   },
   {
     text: "Remove the bread from the oven and let it cool on a wire rack",
