@@ -134,24 +134,18 @@ label,
 }
 
 /*instagram container*/
-.instagram-container {
-  display: flex;
+.instagram-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
-  gap: 10px; /* Space between posts */
-  flex-wrap: wrap; /* Allows stacking on small screens */
-}
-
-.instagram-container blockquote {
-  max-width: 30%; /* Limit width to prevent too large display */
-  min-width: 300px; /* Ensures readability on smaller screens */
-  flex-grow: 1;
 }
 
 /* Slideshow Container */
 .slideshow-container {
   position: relative;
   max-width: 97vw;
-  margin: auto;
+  margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,7 +158,6 @@ label,
   text-align: center;
   background: var(--first-color);
   font-family: var(--font-family-2);
-  margin-bottom: 20px;
 }
 
 .slide h2 {
@@ -207,17 +200,17 @@ label,
   background-color: black;
 }
 
-.video-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; 
+.video-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
-.video-container iframe {
-  flex: 1 1 45%; 
-  max-width: 48vw; 
+.video {
   aspect-ratio: 16/9;
+  margin: 0 auto;
+  width: 100%;
 }
 
 input,
@@ -305,7 +298,7 @@ button:active {
   display: inline-block;
 }
 .bread-right {
-  transform: translateX(-18px);
+  transform: translateX(-12px);
   display: inline-block;
 }
 
@@ -330,7 +323,8 @@ footer h3 {
 footer p,
 footer a {
   font-family: var(--font-family-2);
-  font-size: 1.25rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 footer ul {
@@ -393,7 +387,7 @@ footer a {
     padding: auto;
   }
   .bread-right {
-    transform: translateX(-15px);
+    transform: translateX(-13px);
     display: inline-block;
   }
 
@@ -401,18 +395,22 @@ footer a {
     font-size: 14px;
   }
 
-  .grid {
+  .grid,
+  .video-grid {
     grid-template-columns: 1fr;
   }
 
-  .video-container {
-    flex-direction: column;
-    align-items: center;
+  .instagram-grid {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .video-container iframe {
-    width: 100%; /* Full width on small screens */
-    height: auto;
-    aspect-ratio: 16/9;
+@media (max-width: 500px) {
+  .instagram-grid {
+    grid-template-columns: 1fr; 
+
+}
+  .instagram-media {
+    width: 100% !important; 
   }
 }
