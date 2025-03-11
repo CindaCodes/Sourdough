@@ -46,7 +46,7 @@
 
 .flip {
   display: inline-block;
-  transform: scaleX(-1); /* Flips horizontally */
+  transform: scaleX(-1);
 }
 
 .hero h1 {
@@ -209,13 +209,17 @@ label,
 }
 
 /*Cards*/
-
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card-body {
   padding: 30px;
 }
 
 .card-footer {
-  padding: 0 30px 30px;
+  text-align: center;
 }
 /* Navigation buttons */
 .prev,
@@ -493,11 +497,19 @@ footer .grid {
 }
 
 @media (max-width: 500px) {
+  .grid,
+  .card,
+  .slideshow-container,
+  .container,
+  .column {
+    margin: 10px 0;
+    width: 100vw;
+  }
   .grid-4-columns,
   footer .grid {
     grid-template-columns: 1fr;
   }
   .instagram-media {
-    width: 100% !important;
+    width: 90% !important;
   }
 }
