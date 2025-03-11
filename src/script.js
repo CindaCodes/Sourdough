@@ -91,9 +91,14 @@ function calculateTimeframe() {
 
   document.getElementById(
     "starterAmountTime"
-  ).textContent = `Starter: ${starter}g`;
-  document.getElementById("waterAmountTime").textContent = `Water: ${water}g`;
-  document.getElementById("flourAmountTime").textContent = `Flour: ${flour}g`;
+  ).innerHTML = `<strong>Starter:</strong> ${starter}g`;
+  document.getElementById(
+    "waterAmountTime"
+  ).innerHTML = `<strong>Water:</strong> ${water}g`;
+  document.getElementById(
+    "flourAmountTime"
+  ).innerHTML = `<strong>Flour:</strong> ${flour}g`;
+
 
   // Show the result box
   document.getElementById("resultBox").style.display = "block";

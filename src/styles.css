@@ -78,10 +78,26 @@
 .hero button:hover {
   background: var(--third-color);
 }
+/*Grids*/
 
-/* 2 Column Section*/
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  margin: 20px;
+}
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-4-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
-.container  {
+/* More info section*/
+
+.info {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -90,35 +106,65 @@
   max-width: 97vw;
 }
 
-.column, .checklist-container{
+.column,
+.card,
+.checklist-container {
   background: var(--first-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
-.container h2 {
+p {
+  font-family: var(--font-family-2);
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
   color: var(--second-color);
   text-align: center;
   font-family: var(--font-family-1);
-  margin-bottom: 15px;
+  margin: 15px auto;
 }
 
-.container h3, .checklist-container h2 {
+h3 {
   text-align: center;
   color: var(--second-color);
   font-family: var(--font-family-1);
   margin: 10px auto;
 }
 
-.column h4 {
+h4,
+.step,
+.note {
   font-family: var(--font-family-2);
   text-align: center;
 }
 
-.starter label,
-.recipe label .result-box,
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  margin: 20px;
+}
+
+label,
 .results {
   font-family: var(--font-family-2);
   letter-spacing: 1px;
@@ -127,25 +173,17 @@
 
 .tool-button {
   display: block;
-  margin: 10px auto; /* Centers the button horizontally */
+  margin: 10px auto;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-}
-
-/*instagram container*/
-.instagram-grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: center;
 }
 
 /* Slideshow Container */
 .slideshow-container {
   position: relative;
   max-width: 97vw;
-  margin: 20px auto;
+  margin: 20px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,10 +198,6 @@
   font-family: var(--font-family-2);
 }
 
-.slide h2 {
-  font-family: var(--font-family-1);
-  color: var(--second-color);
-}
 .slide p,
 .column li {
   font-family: var(--font-family-2);
@@ -174,6 +208,15 @@
   display: block;
 }
 
+/*Cards*/
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
 /* Navigation buttons */
 .prev,
 .next {
@@ -197,26 +240,13 @@
 
 .prev:hover,
 .next:hover {
-  background-color: black;
-}
-
-.video-grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-
-.video {
-  aspect-ratio: 16/9;
-  margin: 0 auto;
-  width: 100%;
+  background-color: var(--fourth-color);
+  color: var(--second-color);
 }
 
 .starter input,
 .recipe input,
-select,
- .step label, .note {
+select {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
@@ -229,7 +259,6 @@ select,
   letter-spacing: 1px;
 }
 
-
 .starter input:focus,
 .recipe input:focus select:focus {
   border-color: var(--fourth-color);
@@ -240,7 +269,8 @@ select,
   margin-bottom: 40px;
 }
 
-button {
+button,
+.btn {
   background: var(--fourth-color);
   color: var(--second-color);
   border: none;
@@ -255,10 +285,16 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   background: var(--second-color);
   color: var(--fourth-color);
   box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .button-container {
@@ -275,7 +311,6 @@ button:active {
 
 /*checklist*/
 .checklist-container {
-  margin: auto;
   padding: 20px;
 }
 
@@ -310,7 +345,6 @@ button:active {
   font-size: 12px;
   cursor: pointer;
   border: none;
-  background: none;
   margin-left: auto;
   justify-items: right;
   white-space: pre-line;
@@ -328,6 +362,18 @@ button:active {
 .checklist-container .completed {
   text-decoration: line-through;
   color: gray;
+}
+
+.step label,
+.note {
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  font-family: var(--font-family-2);
+  letter-spacing: 1px;
+  text-align: left;
 }
 
 footer {
@@ -370,7 +416,6 @@ footer ul {
 }
 
 footer li {
-  list-style: none;
   margin: 15px 0;
   padding: 0;
 }
@@ -380,10 +425,8 @@ footer a {
   opacity: 0.7;
 }
 
-.grid {
-  display: grid;
+footer .grid {
   grid-template-columns: 1fr 2fr;
-  grid-gap: 20px;
 }
 
 @media (max-width: 960px) {
@@ -403,18 +446,12 @@ footer a {
     padding: 10px 20px;
     font-size: 1rem;
   }
-  .why-sourdough {
-    flex-direction: column;
-    text-align: center;
-  }
+
   .image-container,
   .text-container {
     max-width: 100%;
   }
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
+
   .recipe,
   .starter {
     width: 97vw;
@@ -433,18 +470,31 @@ footer a {
     font-size: 14px;
   }
 
-  .grid,
-  .video-grid {
+  .grid-2-columns {
     grid-template-columns: 1fr;
   }
 
-  .instagram-grid {
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4-columns {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .card-body {
+    padding: 5px;
+  }
+
+  .card iframe {
+    height: 327px !important;
+    width: 300px !important;
   }
 }
 
 @media (max-width: 500px) {
-  .instagram-grid {
+  .grid-4-columns,
+  footer .grid {
     grid-template-columns: 1fr;
   }
   .instagram-media {
