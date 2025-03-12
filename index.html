@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="/src/styles.css" />
     <title>Sourdough Guide and Calculators</title>
   </head>
+  
   <body>
     <section class="hero">
       <div class="hero-overlay"></div>
@@ -66,7 +67,6 @@
         </ul>
         <button
           onclick="window.location.href='/index.html#starter-calculator'"
-          class="tool-button"
         >
           Starter Calculator
         </button>
@@ -425,10 +425,10 @@
             Calculate Feeding Amount
           </button>
         </div>
-        <div id="resultBox" class="result-box">
-          <h3 id="starterAmountTime"></h3>
-          <h3 id="waterAmountTime"></h3>
-          <h3 id="flourAmountTime"></h3>
+        <div id="resultBox" class="results">
+          <p id="starterAmountTime"></p>
+          <p id="waterAmountTime"></p>
+          <p id="flourAmountTime"></p>
         </div>
       </div>
       <div class="column recipe" id="bakers-math">
@@ -478,7 +478,7 @@
       <div id="checklist"></div>
     </div>
     <footer>
-      <section class="grid grid-3-column">
+      <section class="grid grid-2-columns-with-first-narrow">
         <div>
           <h3>More about Sourdough</h3>
           <ul>
