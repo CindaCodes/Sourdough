@@ -42,16 +42,24 @@
   font-family: var(--font-family-1);
   font-size: 5rem;
   margin-bottom: 10px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
 .hero h2 {
+  color: var(--fourth-color);
   font-family: var(--font-family-2);
   font-size: 3rem;
   margin-bottom: 20px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
 .hero h3 {
+  color: var(--fourth-color);
   font-family: var(--font-family-2);
   font-size: 3rem;
   margin-bottom: 10px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
 .flip {
   display: inline-block;
@@ -210,8 +218,6 @@ label,
   justify-content: center;
 }
 
-
-
 /* Navigation buttons and Input */
 .prev,
 .next {
@@ -279,7 +285,6 @@ button,
   margin: 10px auto;
   padding: 10px 15px;
   transition: all 0.2s ease-in-out;
-  
 }
 
 button:hover,
@@ -305,7 +310,6 @@ button:hover,
 button:active {
   background: var(--third-color);
 }
-
 
 /*checklist*/
 .checklist-container {
