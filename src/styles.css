@@ -428,6 +428,11 @@ footer a {
   opacity: 0.7;
 }
 
+.pinterest-embed {
+  border: none;
+  overflow: hidden;
+}
+
 @media (max-width: 960px) {
   .hero-content {
     padding: 0 20px;
