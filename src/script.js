@@ -62,26 +62,22 @@ function calculateTimeframe() {
   let flourRatio = 1;
 
   if (timeFrame === "6-8") {
-    starterRatio = 1;
     waterRatio = 2;
     flourRatio = 2;
   } else if (timeFrame === "8-10") {
-    starterRatio = 1;
     waterRatio = 3;
     flourRatio = 3;
   } else if (timeFrame === "10-12") {
-    starterRatio = 1;
     waterRatio = 4;
     flourRatio = 4;
   } else if (timeFrame === "12-14") {
-    starterRatio = 1;
     waterRatio = 5;
     flourRatio = 5;
   } else if (timeFrame === "16-24") {
-    starterRatio = 1;
     waterRatio = 10;
     flourRatio = 10;
   }
+
 
   let totalRatio = starterRatio + waterRatio + flourRatio;
 
